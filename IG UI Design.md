@@ -138,7 +138,113 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
             ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  StoryItem("For You", 1),
+                  StoryItem("HBD", 32),
+                  StoryItem("Rewards", 23),
+                  StoryItem("Places", 14),
+                  StoryItem("Rewards", 45),
+                  StoryItem("Happy", 96),
+                  StoryItem("Hobby", 87),
+                ],
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              FrameGaleri(true, Icons.grid_on_outlined),
+              FrameGaleri(false, Icons.person_pin_outlined),
+            ],
+          ),
+          GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: 220,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, crossAxisSpacing: 3, mainAxisSpacing: 3),
+            itemBuilder: (context, index) => Image.network(
+              "https://picsum.photos/id/1000/300/300",
+              fit: BoxFit.cover,
+            ),
           )
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey[700],
+          currentIndex: 4,
+          showSelectedLabels: false,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.add_box_outlined), label: "Status"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart), label: "Cart"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          ]),
+    );
+  }
+}
+
+class FrameGaleri extends StatelessWidget {
+  FrameGaleri(this.active, this.iconGaleri);
+
+  final bool active;
+  final IconData iconGaleri;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        child: Icon(
+          iconGaleri,
+          size: 28,
+        ),
+        padding: EdgeInsets.only(bottom: 15),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+                color: active == true ? Colors.black : Colors.transparent,
+                width: 2),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class StoryItem extends StatelessWidget {
+  StoryItem(this.status, this.idGambar);
+
+  final String status;
+  int idGambar = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(right: 10),
+      child: Column(
+        children: [
+          Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: Colors.white, width: 3),
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://picsum.photos/id/$idGambar/300/300"))),
+          ),
+          Text(status),
         ],
       ),
     );
@@ -167,5 +273,6 @@ class Followers extends StatelessWidget {
     );
   }
 }
+
 
 ```
