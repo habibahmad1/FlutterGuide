@@ -1,4 +1,4 @@
-# SnackBar GetX Flutter
+# GetX SnackBar Flutter
 ```dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
