@@ -1,4 +1,4 @@
-# Bottom Sheet GetX Flutter
+# GetX Bottom Sheet Flutter
 ```dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
