@@ -1,4 +1,4 @@
-# State GetX Flutter
+# GetX State Flutter
 ini merupakan agar suatu Scaffold jika ada perubahan bisa hanya dengan Stateless, dan jika element ingin ada perubahan maka gunakan Obx() lalu bungkus element yang akandirender perubahan terus menerus di dalama itu.
 ```dart
 import 'package:flutter/material.dart';
