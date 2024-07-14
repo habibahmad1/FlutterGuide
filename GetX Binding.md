@@ -92,3 +92,31 @@ class Page1 extends StatelessWidget {
 }
 
 ```
+
+# Class Binding
+jadi jika memiliki banyak controller bisa gunakan bindings atau lebih mudah dikumpulkan pada class tersendiri jadi nanti tinggal panggil.
+## Perubahan pada Main Code
+```dart
+getPages: [
+        GetPage(
+          name: "/page1",
+          page: () => Page1(),
+          binding: allBinding(),
+        ),
+      ],
+```
+
+## Pada file Class Binding
+```dart
+import 'package:flutter_sample/controller/counter.dart';
+import 'package:get/get.dart';
+
+class allBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut(() => CounterController());
+    Get.lazyPut(() => CounterController());
+  }
+}
+
+```
