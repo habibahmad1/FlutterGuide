@@ -14,12 +14,22 @@ C:/Users/asus/AppData/Local/Pub/Cache/bin
 /c/Users/asus/AppData/Local/Pub/Cache/bin/get.bat --version
 ```
 
-### 4. Buat Alias agar path mudah di gunakan Command nya.
+### 4. Buat file untuk menyimpan alias yang akan digunakan.
+```dart
+nano ~/.bashrc
+```
+
+### 5. Buat Alias didalam file bashrc itu agar path tersimpan terus dan mudah di gunakan Command nya. Setelah ketik itu lalu tekan CTRL+O lalu Enter untuk simpan file baru.
 ```dart
 alias get='/c/Users/asus/AppData/Local/Pub/Cache/bin/get.bat'
 ```
 
-### 5. Cek lagi apakah sudah berhasil di install dengan ketik
+### 6. Simpan agar bisa otomatis digunakan alias nya ketika buka terminal baru tanpa alias ulang.
+```dart
+source ~/.bashrc
+```
+
+### 7. Cek lagi apakah sudah berhasil di install dengan ketik
 ```dart
 get --version
 ```
