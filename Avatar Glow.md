@@ -1,4 +1,5 @@
 # Avatar Glow Flutter
+Merupakan agar ada seperti animasi notif
 ```dart
 import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
