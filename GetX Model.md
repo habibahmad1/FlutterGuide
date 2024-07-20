@@ -23,7 +23,7 @@ get init
 
 4. Setelah itu buat model agar bisa dibuatkan di folder app/data dengan ketik.
 ```dart
-get generate model with assets/models/user.json
+get generate model user with assets/models/user.json
 ```
 
 5. Bertambah folder pada app ada folder baru yaitu models dan providers yang dibuatkan otomatis beserta isinya pada file yang ada di kedua folder tersebut.
