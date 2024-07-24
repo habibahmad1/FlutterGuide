@@ -1,9 +1,12 @@
 # Source Code untuk Doa APK Flutter
+Ini masih belum menggunakan GetX Pattern/Framework
+
+
 ### 1. Buat project untuk flutter
 ```dart
 flutter create doa
 ```
-.
+
 ### 2. Didalam folder libs buat folder models lalu buat file doa.dart, isi ini dibuat dengan quicktype untuk data json.
 ```dart
 // To parse this JSON data, do
