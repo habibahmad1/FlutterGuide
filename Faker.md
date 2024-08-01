@@ -1,4 +1,5 @@
 # Faker FLutter
+untuk buat data dummy/palsu
 ```dart
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
