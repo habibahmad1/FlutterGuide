@@ -1,4 +1,4 @@
-# Animated Align Flutter
+# Animated Align Flutter.
 ## Controller Code
 ```dart
 import 'package:get/get.dart';
