@@ -1,4 +1,5 @@
 # ClipPath Flutter
+Memotong jadi Segitiga
 ```dart
 import 'package:flutter/material.dart';
 
