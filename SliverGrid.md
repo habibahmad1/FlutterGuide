@@ -1,5 +1,5 @@
 # SliverGrid.count/extend Flutter
-Untuk membuat grid tapi dalam bentuk sliver.
+Untuk membuat grid tapi dalam bentuk sliver, Gunakan SliverGrid.count/extend agar lebih simple.
 ```dart
 import 'dart:math';
 
